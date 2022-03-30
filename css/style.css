@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'Norse';
+  src: url('/Norse-Bold.otf');
+  /* font-style: normal; */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  line-height: 1.5;
+}
+
+p {
+  max-width: 50ch;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.container-left {
+  background: url('/images/container-left-background.jpg') no-repeat center center/cover;
+  /* flex-basis: 33%; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2 1 auto;
+}
+
+.logo {
+  margin-bottom: auto;
+  margin-top: 14rem;
+  min-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+}
+
+.logo img {
+  max-width: auto;
+  max-height: 18ch;
+}
+
+.logo h1 {
+  font-size: 6rem;
+  align-self: center;
+  font-family: 'Norse';
+}
+
+.container-right {
+  flex: 3 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
