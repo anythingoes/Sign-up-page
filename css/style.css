@@ -16,12 +16,9 @@ body {
 }
 
 p {
-  max-width: 50ch;
+  max-width: 55ch;
 }
 
-a {
-  color: inherit;
-}
 
 .container {
   display: flex;
@@ -62,11 +59,36 @@ a {
   font-family: 'Norse';
 }
 
+.container-left cite {
+  margin-bottom: 0.7rem;
+  font-style: normal;
+}
+
+.container-left a {
+  color: inherit;
+}
+
 .container-right {
   flex: 3 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 2rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-right-text {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.container-right-text>p:last-child {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.container-right-text span {
+  font-style: italic;
 }
