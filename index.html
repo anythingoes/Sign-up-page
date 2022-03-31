@@ -28,7 +28,9 @@
       <div class="container-right-text">
         <p>
           This is not a real online service! You know need something like this in your life to help you realize your
-          deepest dreams. Sign up <span>now</span> to get started.
+          deepest dreams.
+          <br>
+          Sign up <span>now</span> to get started.
         </p>
         <p>
           You <span>know</span> you want to.
@@ -36,39 +38,38 @@
       </div>
 
       <div class="container-right-form">
+        <h2>Let's do this!</h2>
         <form id="sign_up" action="#" method="post">
-          <h2>Let's do this!</h2>
-
-          <div class="form-left">
+          <div class="group">
             <p>
               <label for="first_name">FIRST NAME</label>
               <input id="first_name" type="text" name="first_name">
             </p>
-
-            <p>
-              <label for="email">EMAIL</label>
-              <input id="email" type="email" name="user_email">
-            </p>
-
-            <p>
-              <label for="password">PASSWORD</label>
-              <input id="password" type="password" name="user_password">
-            </p>
-          </div>
-          <div class="form-right">
             <p>
               <label for="last_name">LAST NAME</label>
               <input id="last_name" type="text" name="last_name">
             </p>
+          </div>
 
+          <div class="group">
+            <p>
+              <label for="email">EMAIL</label>
+              <input id="email" type="email" name="user_email">
+            </p>
             <p>
               <label for="phone_num">PHONE NUMBER</label>
               <input id="phone_num" type="tel" name="user_phone_number">
             </p>
+          </div>
 
+          <div class="group">
+            <p>
+              <label for="password">PASSWORD</label>
+              <input id="password" type="password" name="user_password" required>
+            </p>
             <p>
               <label for="password_confirm">CONFIRM PASSWORD</label>
-              <input id="password_confirm" type="password" name="user_password_confirm">
+              <input id="password_confirm" type="password" name="user_password_confirm" required>
             </p>
           </div>
         </form>

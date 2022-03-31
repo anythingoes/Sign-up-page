@@ -13,6 +13,7 @@
 html,
 body {
   line-height: 1.5;
+  background-color: hsl(0, 0%, 95%);
 }
 
 p {
@@ -74,21 +75,82 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 2rem;
-  padding: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .container-right-text {
+  padding-left: 3rem;
   font-weight: 600;
   font-size: 1.3rem;
 }
 
 .container-right-text>p:last-child {
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .container-right-text span {
   font-style: italic;
+}
+
+.container-right-form {
+  background-color: hsl(0, 0%, 100%);
+  min-width: 100%;
+  padding: 1.5rem 3rem 2rem;
+}
+
+.container-right-form h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.container-right-form form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* gap: 4rem; */
+}
+
+.container-right-form .group {
+  display: flex;
+  gap: 4rem;
+}
+
+.container-right-form form>*+* {
+  margin-top: 1rem;
+}
+
+.container-right-form p {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-right-form label {
+  letter-spacing: .1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 40%);
+}
+
+.container-right-form input {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 4px;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #596D48;
+  box-shadow: 5px 5px 6px -3px #cdcdcd;
+  ;
+}
+
+input:invalid {
+  border: 1px solid red;
 }
