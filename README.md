@@ -29,5 +29,5 @@ This is a solution to the project from [The Odin Project](https://www.theodinpro
 
 ### Links
 
-![Github page](https://anythingoes.github.io/Sign-up-page/)
+- [Github page](https://anythingoes.github.io/Sign-up-page/)
 
