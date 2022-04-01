@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Norse';
-  src: url('/Norse-Bold.otf');
+  src: url('../Norse-Bold.otf');
 }
 
 :root {
@@ -68,7 +68,7 @@ p {
 
 /* SIDEBAR IMAGE LOGO HEADING and IMAGE CREDIT */
 .container-left {
-  background: url('./images/container-left-background.jpg') no-repeat center center/cover;
+  background: url('../images/container-left-background.jpg') no-repeat center center/cover;
   color: var(--color-white);
 }
 
