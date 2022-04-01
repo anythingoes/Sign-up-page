@@ -68,7 +68,7 @@ p {
 
 /* SIDEBAR IMAGE LOGO HEADING and IMAGE CREDIT */
 .container-left {
-  background: url('/images/container-left-background.jpg') no-repeat center center/cover;
+  background: url('./images/container-left-background.jpg') no-repeat center center/cover;
   color: var(--color-white);
 }
 
