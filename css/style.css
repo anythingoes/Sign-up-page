@@ -54,23 +54,28 @@ p {
   min-height: 100vh;
 }
 
+.container>* {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Set initial size */
+  /* 56rem is the breakpoint for the flex to wrap */
+  flex: 1 1 calc((56rem - 100%) * 999);
+}
 
 
 /* SIDEBAR IMAGE LOGO HEADING and IMAGE CREDIT */
 .container-left {
   background: url('/images/container-left-background.jpg') no-repeat center center/cover;
   color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 40ch;
 }
 
 .logo {
   margin-bottom: auto;
   margin-top: var(--size5);
-  min-width: 100%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -80,19 +85,19 @@ p {
 }
 
 .logo img {
-  max-width: auto;
-  max-height: 15ch;
+  max-height: 10em;
 }
 
 .logo h1 {
   font-size: var(--size4);
   align-self: center;
   font-family: 'Norse';
+  /* Reset margin applied by Normalize reset */
   margin: 0;
 }
 
 .container-left cite,
-.container-left a {
+.container-left cite a {
   margin-bottom: var(--size-1);
   font-style: normal;
   font-weight: 300;
@@ -104,13 +109,11 @@ p {
 
 /* MAIN CONTENT, TEXT, FORM, BUTTON */
 .container-right {
-  flex: 10 1 0;
-  min-width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   font-weight: 600;
+
+  /* Allow container to grow to twice the size of image container */
+  flex: 2;
 }
 
 .container-right-text {
@@ -123,7 +126,7 @@ p {
   margin-top: var(--size0);
 }
 
-.container-right-text span {
+.container-right-text p span {
   font-style: italic;
 }
 
@@ -146,32 +149,34 @@ p {
   flex-wrap: wrap;
 }
 
-.container-right-form .group {
+.container-right-form form .group {
   display: flex;
   flex-wrap: wrap;
   gap: var(--size0);
 }
 
-.container-right-form .group p:first-child {
+/* Add margin to input and label in the left column in 2 column layout */
+.container-right-form form .group p:first-child {
   margin-right: var(--size2);
 }
 
+/* Add margin to any element that is a sibling i.e skip the first child of form */
 .container-right-form form>*+* {
   margin-top: var(--size1);
 }
 
-.container-right-form p {
+.container-right-form form .group p {
   display: flex;
   flex-direction: column;
 }
 
-.container-right-form label {
+.container-right-form form .group label {
   letter-spacing: .1rem;
   font-size: var(--size-1);
   color: var(--color-light-text);
 }
 
-.container-right-form input {
+.container-right-form form .group input {
   padding: var(--size-2);
   font-size: var(--size0);
   border: 1px solid var(--color-bg-fade);
@@ -182,7 +187,7 @@ p {
 
 input:focus {
   outline: none;
-  border: 1px solid #596D48;
+  border: 1px solid var(--color-primary);
   box-shadow: 5px 5px 6px -3px var(--color-shadow);
   ;
 }
@@ -218,6 +223,8 @@ input:invalid {
   font-weight: 600;
 }
 
+
+/* Media queries to change margin and padding for better space utilization on small screens  */
 @media (max-width: 600px) {
   .logo {
     margin: auto;
